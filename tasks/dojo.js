@@ -241,10 +241,10 @@ module.exports = function(grunt) {
     }, function(err, result){
       if(err){
         if(opts.ignoreErrors) {
-          grunt.log.writeln('dojo build error: ' + err);
+          grunt.log.writeln('dojo build error: ' + JSON.stringify(err));
           return done(true);
         } else {
-          grunt.log.error('dojo build error: ' + err);
+          grunt.log.error('dojo build error: ' + JSON.stringify(err));
           return done(false);
         }
       }
